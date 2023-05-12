@@ -19,7 +19,7 @@
     "format": "prettier --write . --ignore-path .prettierignore",
     "lint": "eslint -c .eslintrc.json --ext .ts,.tsx,.js,.jsx src/ --fix",
     "lint-folder": "eslint -c .eslintrc.json --fix --ext .ts,.tsx,.js,.jsx",
-    "stylelint": "stylelint \"**/*.scss\" --fix",
+    "stylelint": "stylelint \"**/*.css\" --fix",
     "commitlint": "npx --no -- commitlint --edit $1",
     "lint-staged": "lint-staged"
   },
