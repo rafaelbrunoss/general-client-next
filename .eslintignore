@@ -1,0 +1,5 @@
+src/**/*.css
+src/**/*.scss
+.history/**
+.next/**
+.scannerwork/**

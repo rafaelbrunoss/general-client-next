@@ -1,0 +1,7 @@
+/*
+  This file contains the commom rules of the application
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
