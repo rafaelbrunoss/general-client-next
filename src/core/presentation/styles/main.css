@@ -1,8 +1,6 @@
-@import 'base/animations';
-@import 'base/common';
-@import 'base/reset';
-@import 'base/typography';
-
-@import 'utilities/variables';
-
-@import 'vendors/vendor-theme';
+@import url('base/animations');
+@import url('base/common');
+@import url('base/reset');
+@import url('base/typography');
+@import url('utilities/variables');
+@import url('vendors/vendor-theme');
