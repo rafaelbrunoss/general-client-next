@@ -1,7 +1,11 @@
-export default function Home() {
-  return (
-    <main className='main'>
-      <div>Home</div>
-    </main>
-  );
+import { redirect } from 'next/navigation';
+
+export default async function Home() {
+  const isAuthenticated = false;
+
+  if (isAuthenticated) {
+    redirect('/home');
+  } else {
+    redirect('/sign-in');
+  }
 }

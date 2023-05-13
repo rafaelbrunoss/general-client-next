@@ -9,9 +9,10 @@ import {
   ServicesType,
   Services,
 } from '@domain/common/models';
+import { Id } from '@domain/common/value-objects';
 import { AuthUser, AuthCredentials } from '@domain/entities';
 import { AnyObject, APP_CONFIG } from '@domain/utils';
-import { Id } from '@domain/common/value-objects';
+
 import {
   EnvironmentService,
   StorageService,

@@ -1,5 +1,5 @@
-import { replaceAllText } from '@domain/utils';
 import { Languages, II18n } from '@domain/common/models';
+import { replaceAllText } from '@domain/utils';
 
 export class I18nService {
   public userLanguage = Languages.DEFAULT;

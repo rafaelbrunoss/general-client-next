@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { AnyObject } from '@domain/utils';
 
 export const useDebounce = (value: AnyObject, delay = 1000): AnyObject => {

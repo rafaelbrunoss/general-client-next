@@ -1,6 +1,7 @@
-import { StorageService } from '@infrastructure/services';
 import { Languages } from '@domain/common/models';
 import { Id } from '@domain/common/value-objects';
+
+import { StorageService } from '@infrastructure/services';
 
 export class AuthUser {
   public id: Id = Id.create();

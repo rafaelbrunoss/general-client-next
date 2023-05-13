@@ -9,7 +9,14 @@
     "plugin:security/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "import", "jsdoc", "jsx-a11y", "security"],
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "jsdoc",
+    "jsx-a11y",
+    "security",
+    "import-helpers"
+  ],
   "overrides": [
     {
       "files": [
@@ -22,7 +29,27 @@
       ],
       "rules": {
         "@typescript-eslint/no-explicit-any": "off",
-        "jsdoc/require-jsdoc": "off"
+        "jsdoc/require-jsdoc": "off",
+        "import-helpers/order-imports": [
+          "warn",
+          {
+            "newlinesBetween": "always",
+            "groups": [
+              ["/^react/", "/^next/", "/@next/"],
+              "module",
+              "/@domain/",
+              "/@application/",
+              "/@infrastructure/",
+              "/@presentation/",
+              "absolute",
+              ["parent", "sibling", "index"]
+            ],
+            "alphabetize": {
+              "order": "asc",
+              "ignoreCase": true
+            }
+          }
+        ]
       }
     }
   ]

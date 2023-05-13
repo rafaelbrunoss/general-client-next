@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import type { AnyAction, EmptyObject, Store } from 'redux';
+
 import { notificationReducer, NotificationState } from './notification';
 
 export type RootStateName = 'notification';
