@@ -6,7 +6,6 @@ import { HttpService } from '@common/infrastructure/services';
 
 import { IAuthGateway, AuthUser, SignInCredentials, SignUpData } from '@auth/domain';
 
-
 @injectable()
 export class AuthHttpGateway implements IAuthGateway {
   constructor(private http: HttpService) {}
