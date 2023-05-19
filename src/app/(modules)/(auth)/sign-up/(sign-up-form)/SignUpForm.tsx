@@ -2,12 +2,12 @@
 
 import Link from 'next/link';
 
-import { Button } from '@presentation/components/lib';
+import { Button } from '@common/ui/components/lib';
 import {
   EmailInput,
   NameInput,
   PasswordInput,
-} from '@presentation/components/use-cases';
+} from '@common/ui/components/use-cases';
 
 import { translate } from './SignUpForm.translations';
 

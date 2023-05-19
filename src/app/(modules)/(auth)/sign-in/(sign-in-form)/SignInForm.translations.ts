@@ -1,18 +1,8 @@
-import { II18n } from '@domain/common/models';
+import { II18n } from '@common/domain/models';
 
-import { I18nService } from '@infrastructure/services';
+import { I18nService } from '@common/infrastructure/services';
 
 const translations: II18n = {
-  es: {
-    forgotPassword: 'Olvide mi contraseña',
-    login: 'Iniciar sesión',
-    rememberMe: 'Acuérdate de mí',
-    signUp: 'Inscribirse',
-    signInWithGoogle: 'Iniciar sesión con la cuenta de Google',
-    dontHaveAnAccount: '¿No tienes una cuenta?',
-    signUpForFree: ' Registrate gratis',
-    or: 'o',
-  },
   enUS: {
     forgotPassword: 'Forgot password',
     login: 'Login',
@@ -22,6 +12,16 @@ const translations: II18n = {
     dontHaveAnAccount: `Don't have an account?`,
     signUpForFree: ' Sign up for free',
     or: 'or',
+  },
+  es: {
+    forgotPassword: 'Olvide mi contraseña',
+    login: 'Iniciar sesión',
+    rememberMe: 'Acuérdate de mí',
+    signUp: 'Inscribirse',
+    signInWithGoogle: 'Iniciar sesión con la cuenta de Google',
+    dontHaveAnAccount: '¿No tienes una cuenta?',
+    signUpForFree: ' Registrate gratis',
+    or: 'o',
   },
   ptBR: {
     forgotPassword: 'Esqueci minha senha',

@@ -2,16 +2,28 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useCallback, useState } from 'react';
 
-import { Button, Checkbox } from '@presentation/components/lib';
-import { EmailInput, PasswordInput } from '@presentation/components/use-cases';
+import { appContainer } from '@common/infrastructure/container';
+
+import { Button, Checkbox } from '@common/ui/components/lib';
+import { EmailInput, PasswordInput } from '@common/ui/components/use-cases';
+
+import { AUTH_SYMBOLS, SignInCredentials } from '@auth/domain';
+
+import { SignInUseCase } from '@auth/application';
 
 import { translate } from './SignInForm.translations';
 
 export default function SignInForm() {
-  const signIn = () => {
-    console.log('TO DO');
-  };
+  const [authForm, setAuthForm] = useState<SignInCredentials>(
+    new SignInCredentials({}),
+  );
+
+  const signIn = useCallback(async () => {
+    const useCase = appContainer.get<SignInUseCase>(AUTH_SYMBOLS.SignInUseCase);
+    const response = await useCase.execute(authForm);
+  }, [authForm]);
 
   const signUp = () => {
     console.log('TO DO');

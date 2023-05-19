@@ -1,15 +1,15 @@
-import { II18n } from '@domain/common/models';
+import { II18n } from '@common/domain/models';
 
-import { I18nService } from '@infrastructure/services';
+import { I18nService } from '@common/infrastructure/services';
 
 const translations: II18n = {
-  es: {
-    turnYourIdeas: 'Convierte tus ideas en realidad',
-    startForFree: 'Empieza gratis',
-  },
   enUS: {
     turnYourIdeas: 'Turn your ideas into reality',
     startForFree: 'Start for free',
+  },
+  es: {
+    turnYourIdeas: 'Convierte tus ideas en realidad',
+    startForFree: 'Empieza gratis',
   },
   ptBR: {
     turnYourIdeas: 'Transforme suas ideias em realidade',

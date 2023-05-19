@@ -1,15 +1,15 @@
-import { II18n } from '@domain/common/models';
+import { II18n } from '@common/domain/models';
 
-import { I18nService } from '@infrastructure/services';
+import { I18nService } from '@common/infrastructure/services';
 
 const translations: II18n = {
-  es: {
-    signUp: 'Inscribirse',
-    login: 'Iniciar sesión',
-  },
   enUS: {
     signUp: 'Sign Up',
     login: 'Login',
+  },
+  es: {
+    signUp: 'Inscribirse',
+    login: 'Iniciar sesión',
   },
   ptBR: {
     signUp: 'Cadastrar',
