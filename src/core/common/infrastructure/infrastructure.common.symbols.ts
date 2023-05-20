@@ -1,4 +1,4 @@
-export const INFRASTRUCTURE_SERVICES_SYMBOLS = {
+export const INFRASTRUCTURE_COMMON_SERVICES_SYMBOLS = {
   EncryptionService: Symbol.for('EncryptionService'),
   EnvironmentService: Symbol.for('EnvironmentService'),
   HttpService: Symbol.for('HttpService'),

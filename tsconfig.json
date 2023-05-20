@@ -24,6 +24,7 @@
     "types": ["reflect-metadata"],
     "paths": {
       "@app/*": ["./src/app/*"],
+      "@core/*": ["./src/core/*"],
       "@common/*": ["./src/core/common/*"],
       "@auth/*": ["./src/core/modules/auth/*"],
       "@user/*": ["./src/core/modules/user/*"]

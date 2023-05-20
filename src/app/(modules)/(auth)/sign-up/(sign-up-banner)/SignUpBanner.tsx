@@ -6,8 +6,9 @@ export default function SignUpBanner() {
       <Image
         width={1}
         height={1}
+        priority
         sizes='100vw'
-        src='/night-sky.jpg'
+        src='/stars-02.jpg'
         className='w-full h-full object-cover'
         alt='Login Image'
       />

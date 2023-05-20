@@ -120,6 +120,7 @@ export class HttpService {
 
       return apiResult;
     } catch (error) {
+      console.error(error);
       return new ApiResult({
         success: false,
         messages: [JSON.stringify(error)],
@@ -144,6 +145,7 @@ export class HttpService {
 
       return apiResult;
     } catch (error) {
+      console.error(error);
       return new ApiResult({
         success: false,
         messages: [JSON.stringify(error)],
@@ -168,6 +170,7 @@ export class HttpService {
 
       return apiResult;
     } catch (error) {
+      console.error(error);
       return new ApiResult({
         success: false,
         messages: [JSON.stringify(error)],
@@ -190,6 +193,7 @@ export class HttpService {
 
       return apiResult;
     } catch (error) {
+      console.error(error);
       return new ApiResult({
         success: false,
         messages: [JSON.stringify(error)],

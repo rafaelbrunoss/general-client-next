@@ -15,7 +15,8 @@ export default function SignInBanner() {
         width={1}
         height={1}
         sizes='100vw'
-        src='/stars.jpg'
+        priority
+        src='/stars-01.jpg'
         className='w-full h-full object-cover'
         alt='Login Image'
       />

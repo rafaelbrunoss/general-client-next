@@ -1,3 +1,3 @@
 export * from './entities';
 export * from './gateways';
-export * from './auth.symbols';
+export * from './domain.auth.symbols';

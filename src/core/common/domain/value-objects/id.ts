@@ -1,14 +1,14 @@
-import { randomUUID } from 'crypto';
+import { v4, NIL } from 'uuid';
 
 export class Id {
-  private _value: number | string = '00000000-0000-0000-0000-000000000000';
-  private static _nullId = '00000000-0000-0000-0000-000000000000';
+  private _value: number | string = NIL;
+  private static _nullId = NIL;
 
   private constructor(id?: number | string | undefined) {
     if (!id) {
-      this._value = randomUUID();
+      this._value = v4();
     } else if (id === 0) {
-      this._value = '00000000-0000-0000-0000-000000000000';
+      this._value = NIL;
     } else {
       this._value = id;
     }

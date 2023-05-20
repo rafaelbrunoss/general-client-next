@@ -1,7 +1,11 @@
-import { FunctionComponent } from 'react';
+import { forwardRef } from 'react';
 
 import { Input, InputProps } from '@common/ui/components/lib';
 
-export const EmailInput: FunctionComponent<InputProps> = (props: InputProps) => {
-  return <Input type='email' placeholder='Email' {...props} />;
-};
+export const EmailInput = forwardRef<HTMLInputElement, InputProps>(
+  (props: InputProps, ref) => {
+    return <Input type='email' placeholder='Email' {...props} ref={ref} />;
+  },
+);
+
+EmailInput.displayName = 'EmailInput';
