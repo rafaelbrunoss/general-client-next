@@ -1,149 +1,148 @@
-# Ciclo de Desenvolvimento
+# Development Cycle
 
-## O Ciclo
+## The Cycle
 
-O Software Development Life Cycle (SDLC) é a aplicação de práticas de negócios padrão para construir aplicações. Normalmente é dividido entre seis e oito etapas: Planejamento, Requisitos, Design, Construção, Documentação, Teste, Implantação, Manutenção. Esses são os componentes principais recomendados para todos os projetos de desenvolvimento de software.
+The Software Development Life Cycle (SDLC) is the application of standard business practices to building applications. It is usually divided into six to eight stages: Planning, Requirements, Design, Implementation, Documentation, Testing, Deployment, Maintenance. These are the recommended core components for all software development projects.
 
-O SDLC é uma forma de medir e melhorar o processo de desenvolvimento. Permite uma análise detalhada de cada etapa do processo. O SDLC ajuda o projeto a atingir seus objetivos identificando ineficiências e custos mais altos e corrigindo-os para que funcionem sem problemas.
+The SDLC is a way to measure and improve the development process. Allows a detailed analysis of each step of the process. The SDLC helps the project achieve its goals by identifying inefficiencies and higher costs and fixing them so they run smoothly.
 
-[Para mais detalhes](https://www.softwaretestinghelp.com/software-development-life-cycle-sdlc/#Software_Development_Life_Cycle_Models)
+[More details](https://www.softwaretestinghelp.com/software-development-life-cycle-sdlc/#Software_Development_Life_Cycle_Models)
 
 ![alt text][sdc]
 
-**1. Planejamento**
+**1. Planning**
 
-Na fase de Planejamento, os líderes do projeto avaliam os termos do projeto. Isso inclui calcular os custos de mão de obra e materiais, criar um cronograma com metas e criar as equipes e a estrutura de liderança do projeto. O planejamento também pode incluir feedback dos stakeholders.
+In the Planning phase, project leaders assess the terms of the project. This includes calculating labor and material costs, creating a timeline with goals, and creating the project teams and leadership structure. Planning can also include stakeholder feedback.
 
-O planejamento deve definir claramente o escopo e o propósito da aplicação. Ele traça o curso e capacita a equipe para criar o software de maneira eficaz. Também estabelece limites para ajudar a impedir que o projeto se expanda ou se desvie de seu propósito original.
+Planning should clearly define the scope and purpose of the application. It charts the course and empowers the team to build the software effectively. It also sets boundaries to help prevent the project from expanding or deviating from its original purpose.
 
-**2. Definição de Requisitos**
+**2. Requirements Definition**
 
-A definição de requisitos é considerada parte do planejamento para determinar o que a aplicação deve fazer e seus requisitos. Os requisitos também incluem a definição dos recursos necessários para construir o projeto.
+Defining requirements is considered part of planning to determine what the application must do and its requirements. The requirements also include defining the resources needed to build the project.
 
-**3. Design e Prototipagem**
+**3. Designing e Prototyping**
 
-A fase de Design modela a maneira como uma aplicação. Alguns aspectos do projeto incluem:
+The Design phase models the way an application will function. Some aspects of the project include:
 
-- _Arquitetura:_ especifica a linguagem de programação, as práticas do setor, o design geral e o uso de qualquer template;
-- _UI:_ define as maneiras como os clientes interagem com o software e como o software responde à entrada;
-- _Plataformas:_ define as plataformas nas quais o software será executado, como Android, versão Windows, Linux, etc;
-- _Programação:_ não apenas a linguagem de programação, mas incluindo métodos de resolução de problemas e execução de tarefas na aplicação;
-- _Comunicações:_ define os métodos pelos quais a aplicação pode se comunicar com outros ativos, como um servidor ou outras instâncias da aplicação;
-- _Segurança:_ define as medidas tomadas para proteger a aplicação, podendo incluir criptografia de tráfego SSL, proteção por senha e armazenamento seguro de credenciais do usuário;
+- _Architecture:_ specifies the programming language, industry practices, overall design, and usage of any template;
+- _UI:_ defines the ways in which clients interact with the software and how the software responds to input;
+- _Platforms:_ defines the platforms on which the software will run, such as Android, Windows version, Linux, etc;
+- _Programming:_ not just the programming language, but including methods for solving problems and executing tasks in the application;
+- _Communications:_ defines the methods by which the application can communicate with other assets, such as a server or other instances of the application;
+- _Security:_ defines the measures taken to protect the application, which may include SSL traffic encryption, password protection and secure storage of user credentials;
 
-A prototipagem pode fazer parte da fase de Design. Um protótipo é como uma das primeiras versões de software no modelo de desenvolvimento de software iterativo. Ele demonstra uma ideia básica de como a aplicação se parece e funciona. Esse design “prático” pode ser mostrado aos stakeholders e um feedback pode ser coletado para melhorar a aplicação. É mais barato alterar a fase de Protótipo do que reescrever o código para fazer uma alteração na fase de Desenvolvimento.
+Prototyping can be part of the Design phase. A prototype is like one of the first versions of software in the iterative software development model. It demonstrates a basic idea of how the application looks and works. This “practical” design can be shown to stakeholders and feedback can be collected to improve the application. It is cheaper to change the Prototype phase than it is to rewrite the code to make a change in the Development phase.
 
-**4. Implementação**
+**4. Implementation**
 
-Esta é a parte onde de fato o software é desenvolvido. O processo de codificação inclui muitas outras tarefas. Encontrar e corrigir erros e falhas é fundamental. Há tarefas que geralmente interrompem o processo de desenvolvimento, como aguardar os resultados dos testes ou compilar o código para que a aplicação possa ser executada. O SDLC pode antecipar esses atrasos para que os desenvolvedores possam ser encarregados de outras tarefas.
+This is the part where the software is actually developed. The coding process includes many other tasks. Finding and fixing bugs and glitches is critical. There are tasks that often interrupt the development process, such as waiting for test results or compiling code so that the application can run. SDLC can anticipate these delays so that developers can be entrusted with other tasks.
 
-**5. Testes**
+**5. Tests**
 
-É fundamental testar uma aplicação antes de disponibilizá-la aos usuários. Muitos dos testes podem ser automatizados. Outros testes só podem ser feitos em um ambiente específico. Os testes devem garantir que cada função funcione corretamente. Diferentes partes da aplicação também devem ser testadas para funcionar perfeitamente juntas. Testes, como o de desempenho, podem ser feitos para ajudar a reduzir quaisquer travamentos ou atrasos no processamento. A fase de teste ajuda a reduzir o número de bugs e falhas que os usuários encontram. Isso leva a uma maior satisfação do usuário e uma melhor taxa de uso.
+It is essential to test an application before making it available to users. Many of the tests can be automated. Other tests can only be done in a specific environment. Tests must ensure that each function works correctly. Different parts of the application must also be tested to work perfectly together. Tests, such as performance testing, can be done to help reduce any hangs or delays in processing. The testing phase helps reduce the number of bugs and glitches that users encounter. This leads to higher user satisfaction and a better usage rate.
 
-**6. Implantação**
+**6. Deployment**
 
-Na fase de implantação, a aplicação é disponibilizada aos usuários.
-Às vezes, a implantação do produto acontece em etapas. O produto pode ser lançado primeiro em um segmento limitado e testado no ambiente de negócios real. Em seguida, com base no feedback, o produto pode ser lançado como está ou com melhorias sugeridas no segmento de mercado alvo.
+In the deployment phase, the application is made available to users. Sometimes product deployment happens in stages. The product can be launched first in a limited segment and tested in the real business environment. Then, based on the feedback, the product can be released as-is or with suggested improvements in the target market segment.
 
-**7. Operação e Manutenção**
+**7. Operation and Maintenance**
 
-Neste ponto, o ciclo de desenvolvimento está quase terminado. A aplicação está feita e sendo utilizada em campo. A fase de Operação e Manutenção ainda é importante. Nesta fase, os usuários descobrem bugs que não foram encontrados durante os testes. Esses erros precisam ser resolvidos, o que pode gerar novos ciclos de desenvolvimento. Além das correções de bugs, modelos como o desenvolvimento iterativo planejam recursos adicionais em versões futuras. Para cada nova versão, um novo Ciclo de Desenvolvimento pode ser lançado.
+At this point, the development cycle is almost over. The application is done and being used in the field. The Operation and Maintenance phase is still important. In this phase, users discover bugs that were not found during testing. These errors need to be resolved, which can generate new development cycles. In addition to bug fixes, models such as iterative development plan for additional features in future releases. For each new version, a new Development Cycle can be launched.
 
-## O Manifesto Ágil
+## The Agile Manifesto
 
-Ao longo dos anos, engenheiros e cientistas de software identificaram práticas que levaram ao sucesso e à falha ao desenvolver software. A conclusão deles foi esse manifesto:
+Over the years, software engineers and scientists have identified practices that have led to success and failure when developing software. Their conclusion was this manifesto:
 
-> Estamos descobrindo maneiras melhores de desenvolver software, fazendo-o nós mesmos e ajudando outros a fazerem o mesmo. Através deste trabalho, passamos a valorizar:
+> We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:
 >
-> **Indivíduos e interações** mais que processos e ferramentas
-> **Software em funcionamento** mais que documentação abrangente
-> **Colaboração com o cliente** mais que negociação de contratos
-> **Responder a mudanças** mais que seguir um plano
+> **Individuals and interactions** over processes and tools
+> **Working software** over comprehensive documentation
+> **Customer collaboration** over contract negotiation
+> **Responding to change** over following a plan
 >
-> Ou seja, mesmo havendo valor nos itens à direita, valorizamos mais os itens à esquerda.
+> That is, while there is value in the items on the right, we value the items on the left more.
 
-[O Manifesto](https://agilemanifesto.org/iso/ptbr/manifesto.html)
-[Os 12 Princípios do Manifeto](https://agilemanifesto.org/iso/ptbr/principles.html)
+[The Manifesto](https://agilemanifesto.org/iso/ptbr/manifesto.html)
+[The 12 Principles of the Manifeto](https://agilemanifesto.org/iso/ptbr/principles.html)
 
-## Metodologias adotadas
+## Adopted methodologies
 
 ### SCRUM
 
-Scrum é um framework que ajuda pessoas, equipes e organizações a gerar valor por meio de soluções adaptáveis para problemas complexos. Em poucas palavras, Scrum exige que um Scrum Master promova um ambiente onde:
+Scrum is a framework that helps people, teams and organizations to generate value through adaptive solutions to complex problems. In a nutshell, Scrum requires a Scrum Master to foster an environment where:
 
-- Um Product Owner ordene o trabalho para um problema complexo em um Product Backlog.
-- O Scrum Team transforma uma seleção do trabalho em um incremento de valor durante uma Sprint.
-- O Scrum Team e seus stakeholders inspecionam os resultados e se ajustam para a próxima Sprint.
-- Repetir
+- A Product Owner orders work for a complex problem in a Product Backlog.
+- The Scrum Team turns a selection of work into a value increment during a Sprint.
+- The Scrum Team and its stakeholders inspect the results and adjust for the next Sprint.
+- Repeat
 
-Para mais detalhes: [Scrum Guide](https://scrumguides.org/scrum-guide.html)
+For more details: [Scrum Guide](https://scrumguides.org/scrum-guide.html)
 
 ![alt text][scrum]
 
 #### Product Backlog
 
-O Product Backlog é uma lista emergente e ordenada do que é necessário para melhorar o produto. É a única fonte de trabalho que o Scrum Team utiliza.
+The Product Backlog is an emergent and ordered list of what is needed to improve the product. It is the only source of work that the Scrum Team uses.
 
 #### Design
 
-Nesta fase executa-se dos itens que podem ir para o Sprint Backlog
+In this phase, items that can go to the Sprint Backlog are executed.
 
 #### Sprint Planning
 
-A Sprint Planning inicia a Sprint, estabelecendo o trabalho a ser executado para a Sprint. Este plano resultante é criado pelo trabalho colaborativo de todo o Scrum Team.
+Sprint Planning starts the Sprint by establishing the work to be performed for the Sprint. This resulting plan is created by the collaborative work of the entire Scrum Team.
 
-O Product Owner garante que os participantes estejam preparados para discutir os itens mais importantes do Product Backlog e como eles são mapeados para a meta do produto. O Scrum Team também pode convidar outras pessoas para participar da Sprint Planning para fornecer conselhos.
+The Product Owner ensures that everyone is prepared to discuss the most important Product Backlog items and how they map to the product goal. The Scrum Team can also invite others to participate in Sprint Planning to provide advice.
 
-A Sprint Planning aborda os seguintes tópicos:
+Sprint Planning addresses the following topics:
 
-1. Por que essa Sprint gera valor?
-2. O que pode ser feito nessa Sprint?
-3. Como o trabalho escolhido será feito?
+1. Why does this Sprint create value?
+2. What can be done in this Sprint?
+3. How will the chosen work be done?
 
 #### Sprint Backlog
 
-O Sprint Backlog é composto pela Sprint Goal (por que), o conjunto de itens do Product Backlog selecionados para a Sprint (o quê), bem como um plano acionável para entrega do incremento (como).
+The Sprint Backlog is made of the Sprint Goal (why), the set of Product Backlog items selected for the Sprint (what), as well as an actionable plan for delivering the Increment (how).
 
-O Sprint Backlog é um plano feito por e para os Desenvolvedores. É uma imagem em tempo real altamente visível do trabalho que os Desenvolvedores planejam realizar durante a Sprint para atingir a Sprint Goal. Consequentemente, a Sprint Backlog é atualizado ao longo da Sprint à medida que mais é aprendido. Deve ter detalhes suficientes para que eles possam inspecionar seu progresso na Daily Scrum.
+The Sprint Backlog is a plan made by and for Developers. It is a highly visible, real-time picture of the work Developers plan to do during the Sprint to achieve the Sprint Goal. Consequently, the Sprint Backlog is updated throughout the Sprint as more is learned. It should have enough detail so they can inspect their progress in the Daily Scrum.
 
 #### Sprint Execution
 
-Sprints são o coração do Scrum. São eventos de duração fixa de um mês ou menos para criar consistência. Um novo Sprint começa imediatamente após a conclusão do Sprint anterior.
+Sprints are the heart of Scrum. These are fixed duration events of one month or less to create consistency. A new Sprint begins immediately after the completion of the previous Sprint.
 
-Para mais detalhes de como essa fase deve ser executada, veja o [Checklist](CHECKLIST.md)
+For more details on how this phase should be performed, see the [Checklist](CHECKLIST.md)
 
 ##### Daily Scrum
 
-O objetivo da Daily Scrum é inspecionar o progresso em direção aa Sprint Goal e adaptar a Sprint Backlog conforme necessário, ajustando o próximo trabalho planejado.
+The purpose of the Daily Scrum is to inspect progress towards the Sprint Goal and adapt the Sprint Backlog as needed, adjusting the next planned work.
 
-A Daily Scrum é um evento de 15 minutos para os Desenvolvedores do Scrum Team. Para reduzir a complexidade, ela é realizada no mesmo horário e local todos os dias úteis da Sprint. Se o Product Owner ou Scrum Master estiverem trabalhando ativamente nos itens da Sprint Backlog, eles participam como Desenvolvedores.
+The Daily Scrum is a 15-minute event for Scrum Team Developers. To reduce complexity, it is held at the same time and location every Sprint business day. If the Product Owner or Scrum Master is actively working on the Sprint Backlog items, they participate as Developers.
 
-Os Desenvolvedores podem selecionar qualquer estrutura e técnicas que desejarem, desde que sua Reunião Diária se concentre no progresso em direção aa Sprint Goal e produza um plano acionável para o próximo dia de trabalho. Isso cria foco e melhora a autogestão. Uma possível estrutura é cada pessoa responder às seguintes questões:
+Developers can select any structure and techniques they like, as long as their Daily Meeting focuses on progress towards the Sprint Goal and produces an actionable plan for the next workday. This creates focus and improves self-management. One possible structure is for each person to answer the following questions:
 
-- O que você fez desde a última reunião?
-- O que você vai fazer até a próxima reunião?
-- Há alguma coisa que está te impedindo de trabalhar direito?
+- What have you done since the last meeting?
+- What are you going to do until the next meeting?
+- Is there anything that is preventing you from working properly?
 
-As Daily Scrums melhoram a comunicação, identificam impedimentos, promovem a agilidade na tomada de decisões e, consequentemente, eliminam a necessidade de outras reuniões. A Daily Scrum não é o único momento em que os Desenvolvedores podem ajustar seu plano. Eles geralmente se reúnem ao longo do dia para discussões mais detalhadas sobre a adaptação ou replanejamento do restante do trabalho da Sprint.
+Daily Scrums improve communication, identify impediments, promote agility in decision-making and, consequently, eliminate the need for other meetings. The Daily Scrum isn't the only time Developers can adjust their plan. They usually meet throughout the day for more detailed discussions about adapting or re-planning the rest of the Sprint's work.
 
 #### Sprint Review
 
-O objetivo da Sprint Review é inspecionar o resultado da Sprint e determinar futuras adaptações. O Scrum Team apresenta os resultados de seu trabalho para os principais stakeholders e o progresso em direção ao Objetivo do Produto é discutido.
+The purpose of the Sprint Review is to inspect the Sprint result and determine future adaptations. The Scrum Team presents the results of its work to key stakeholders and progress towards the Product Purpose is discussed.
 
-Durante o evento, o Scrum Team e os stakeholders revisam o que foi realizado na Sprint e o que mudou em seu ambiente. Com base nessas informações, os participantes colaboram sobre o que fazer em seguida. O Product Backlog também pode ser ajustado para atender a novas oportunidades. A Sprint Review é uma sessão de trabalho e o Scrum Team deve evitar limitá-la a uma apresentação.
+During the event, the Scrum Team and stakeholders review what has been accomplished in the Sprint and what has changed in its environment. Based on this information, participants collaborate on what to do next. The Product Backlog can also be adjusted to meet new opportunities. The Sprint Review is a working session and the Scrum Team should avoid limiting it to a presentation.
 
-A Sprint Review é o penúltimo evento da Sprint e tem um prazo máximo de quatro horas para uma Sprint de um mês. Para Sprints mais curtos, o evento geralmente é mais curto.
+The Sprint Review is the penultimate Sprint event and has a maximum deadline of four hours for a month-long Sprint. For shorter Sprints, the event is usually shorter.
 
 #### Sprint Retrospective
 
-O objetivo da Sprint Retrospective é planejar maneiras de aumentar a qualidade e a eficácia.
+The purpose of the Sprint Retrospective is to plan ways to increase quality and effectiveness.
 
-O Scrum Team inspeciona como a última Sprint foi em relação aos indivíduos, interações, processos, ferramentas e sua Definição de Pronto. Os elementos inspecionados geralmente variam de acordo com o domínio do trabalho. As suposições que os desviaram são identificadas e suas origens exploradas. O Scrum Team discute o que correu bem durante a Sprint, quais problemas foram encontrados e como esses problemas foram (ou não) resolvidos.
+The Scrum Team inspects how the last Sprint went in terms of individuals, interactions, processes, tools and their Definition of Done. The elements inspected generally vary by job domain. The assumptions that led them away are identified and their origins explored. The Scrum Team discusses what went well during the Sprint, what problems were found, and how those problems were (or were not) resolved.
 
-O Scrum Team identifica as mudanças mais úteis para melhorar sua eficácia. As melhorias mais impactantes são abordadas o mais rápido possível. Eles podem até ser adicionados a Sprint Backlog para o próxima Sprint.
+The Scrum Team identifies the most useful changes to improve its effectiveness. The most impactful improvements are addressed as quickly as possible. They can even be added to the Sprint Backlog for the next Sprint.
 
-A Sprint Retrospective conclui a Sprint. É uma reunião de no máximo três horas para um Sprint de um mês. Para Sprints mais curtos, o evento geralmente é mais curto.
+The Sprint Retrospective concludes the Sprint. It's a maximum three-hour meeting for a month-long Sprint. For shorter Sprints, the event is usually shorter.
 
 ---
 

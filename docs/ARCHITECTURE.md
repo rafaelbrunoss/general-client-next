@@ -1,109 +1,113 @@
-# Arquitetura
+# Architecture
 
-A arquitetura de um frontend é uma coleção de ferramentas e processos que visam melhorar a qualidade do código do frontend ao mesmo tempo que cria um fluxo de trabalho mais eficiente e sustentável.[^1] [^2]
+A frontend architecture is a collection of tools and processes that aim to improve the quality of frontend code while creating a more efficient and sustainable workflow. [^1] [^2]
 
-Diferentemente de arquiteturas de coisas físicas, a arquitetura de um software está mais aberta à mudanças e evoluções de acordo com as necessidades do projeto. A arquitetura de um frontend não deve ser encarada como "planeje e esqueça". Processos e estruturas que funcionavam bem no passado precisam ser revisitados porque as necessidades do projeto mudam com o tempo.
+Unlike architectures of physical things, software architecture is more open to changes and evolutions according to the needs of the project. Frontend architecture shouldn't be seen as "plan and forget". Processes and structures that worked well in the past need to be revisited because the project needs change over time.
 
-O trabalho de arquiteturar um sistema pode ser dividido em três etapas: design, planejamento e supervisão.
+The work of architecting a system can be divided into three stages: design, planning and supervision.
 
 ## Design
 
-O design geral da aplicação foi pensando da seguinte maneira:
+This application follows the concept of Domain Driven Design proposed by Eric Evans [^3] and to implement part of that design, it uses the concept of Clean Architecture proposed by Robert C. Marting [^4]. The overall design of the application was thought of as follows:
 
+![alt text][clean-architecture]
 ![alt text][app]
 
-A aplicação é a união de diversos módulos com contextos específicos. Esses módulos não devem ser interdependentes para que a alteração em um módulo não impacte o outro. A única dependência que cada módulo deve possuir é a da biblioteca Core. Isso é feito para que haja um desacoplamento entre os módulos e bibliotecas terceiras. Todas as bibliotecas terceiras são importadas e extendidas na biblioteca Core. Além disso, essa biblioteca também contém códigos que podem ser compartilhados entre os módulos.
+The application is the union of several modules with specific contexts. These modules must be interdependent so that changing one module does not impact the other. The only dependency each module must have is the Common module. This is done so that there is a decoupling between the modules and the application can scale more easily. All third-party libraries are imported and extended in the Common module. Furthermore, this module also contains code that can be shared between modules.
 
-![alt text][core-and-modules]
+![alt text][common-and-modules]
 
 ```
 /src
-├── /core
-│   ├── /components
-│   │   ├── /company-library
-│   │   └── /use-cases
-│   ├── /hooks
-│   ├── /models
-│   ├── /navigation
-│   ├── /services
-│   ├── /store
-│   ├── /styles
-│   │   ├── /base
-│   │   ├── /utilities
-│   │   └── /vendors
-│   └── /utils
+├── /app
+│   ├── /(modules)
+│   │   ├── /(module-a)
+│   │   │   ├── /page-x
+│   │   │   │   ├── /(page-component-z)
+│   │   │   │   │   ├── PageComponentZ.translations.ts
+│   │   │   │   │   └── PageComponentZ.tsx
+│   │   │   │   └── page.tsx
+│   │   │   │
+│   │   │   └── /page-y
+│   │   │
+│   │   └── /(module-b)
+│   │        └── ...
+│   ├── 404.tsx
+│   ├── error.tsx
+│   ├── layout.tsx
+│   └── page.tsx
 │
-├── /modules
-│   ├── /feature-a
-│   │   ├── /components
-│   │   ├── /models
-│   │   ├── /screens
-│   │   │   ├── /screen-a
-│   │   │   │   ├── /inner-component-aa
-│   │   │   │   ├── /inner-component-ab
-│   │   │   │   ├── ScreenA.tsx
-│   │   │   │   ├── ScreenA.module.scss
-│   │   │   │   ├── ScreenA.spec.tsx
-│   │   │   │   ├── ScreenA.translations.tsx
-│   │   │   │   └── ScreenAContext.tsx
-│   │   │   └── /screen-b
-│   │   │       └── ...
-│   │   ├── /services
-│   │   └── /utils
-│   │
-│   └── /feature-b
-│       └── ...
-└── App.tsx
+└── /core
+    ├── /common
+    │   ├── /domain
+    │   ├── /infrastructure
+    │   ├── /ui
+    │   └── common.module.ts
+    │
+    ├── /modules
+    │   ├── /module-a
+    │   │   ├── /application
+    │   │   ├── /domain
+    │   │   ├── /infrastructure
+    │   │   └── module-a.module.ts
+    │   │
+    │   └── /module-b
+    │       └── ...
+    │
+    └── app.container.ts
 ```
 
-### Estrutura das pastas
+### Folder structure
 
-#### Core
+#### App
 
-- **components**: aqui ficam os componentes atômicos da aplicação, como botões. Caso utilize-se uma bilioteca terceira, esta deverá ser extendida aqui para que os módulos não a importem e sim os componentes contidos aqui. Ainda dentro desta pasta, há dois tipos de componentes, os que compõe a biblioteca componentes da empresa e os casos gerais de uso desses componentes. Um exemplo de caso de uso são os botões de salvar e cancelar.
-- **hooks**: aqui ficam os hooks customizados.
-- **models**: aqui ficam os modelos gerais da aplicação.
-- **navigation**: aqui é criada a navegação geral da aplicação e suas regras.
-- **services**: aqui ficam os serviços gerais da aplicação.
-- **store**: aqui fica a store central que pode ser utilizada por toda a aplicação.
-- **styles**: aqui ficam as regras gerais de estilo da aplicação. Para uma melhor organização essas regras foram divididas em algumas pastas. Na pasta base, ficam as regras básicas como a de reset, classes comuns em toda a aplicação e regras tipográficas. Na pasta utilities, ficam as variáveis, funções, mixins e placeholders. Na pasta vendors, ficam as importações de estilos de terceiros.
-- **utils**: aqui ficam algumas constantes e funções mais genéricas que podem ser utilizadas por toda a aplicação.
+This is the only part specific to Next.js. Since version 13, the folder *app* contains all the pages. The idea is to separate the application in modules with a specific context and inside that modules, create pages that are made components. Each component must have it's render file and a translation file. Since this project uses TailwindCSS, there is no need for a style file in the majority of cases.
+
+All the business rules and infrastructure are maintained outside of this folder to promote decoupling.
+
+#### Common
+
+- **domain**: here are the entities, value-objects, utilities and anything else related with enterpise types. This layer should not depend on any other layer.
+- **infrastructure**: here are the base for containers, base for modules, services and anything else related with setting up the application or communicating with other parties. This layer may depend on the domain layer.
+- **ui**: here are the core components, hooks, store, styles and anything else related with the user interface. This is the only layer allowed to use React and Next.js concepts and libraries; and it's also the only layer that should be refactored in case of changing the user interface library. This layer may depend on the domain layer.
 
 #### Modules
 
-- Feature X
-  - **components**: aqui ficam componentes mais genéricos desse módulo
-  - **models**: aqui ficam os modelos específicos desse módulo
-  - **screens**: aqui ficam os componentes que constituem as telas. Caso seja necessário criar um contexto para a tela, o contexto também deve ficar aqui. Cada componente é composto por pelo menos quatro arquivos: o arquivo com a lógica de negócio, o arquivo de tradução, o arquivo de estilos e o arquivo de testes unitários.
-  - **services**: aqui ficam os serviços específicos desse módulo
-  - **utils**: aqui ficam alguns utilitários específicos desse módulo
+- Module A
+  - **domain**: here are the entities, value-objects, gateways interfaces and anything else related with enterpise types specific to this context. This layer should not depend on any other layer, unless it's the domain layer from the Common module.
+  - **application**: here are the use cases related with this context. This layer may only depend on the domain layer of this module or the Common module.
+  - **infrastructure**: here are the gateways and anything else related with communicating with other parties. This layer may depend on the domain layer, the application layer and the domain layer from the Common module.
 
-### Fluxo de dados
+### Data flow
 
-A aplicação deve ser montada utilizando componentes container e de apresentação.
+When it comes only to the user interface, the application should use the pattern of containers and presentational components
+in order the decouple executing logic from exhibit information.
 
-Componentes container são montados por uma união de componentes de apresentação. Neles estão a lógica de negócio, às chamadas à API, o acesso à store.
+Containers components are formed by the union of presentational components. They contain the business logic, API calls, access to the store, etc.
 
-Componentes de apresentação são stateless e sua única função é apresentar. Não devem conter nenhuma lógica de negócio, não deve conter nada do domínio da aplicação para que sejam altamente reutilizáveis. Se comunicam com os componentes containers por meio de parâmetros de entrada e emitindo algum evento ou chamada de função como saída.
+Presentation components are stateless and their only function is to present. They should not contain any business logic, should not contain anything from the application domain so that they are highly reusable. They communicate with container components through input parameters and by issuing some event or function call as output.
 
 ![alt text][data-flow]
 
-## Planejamento
+## Planning
 
-Para mais informações confira o [Ciclo de Desenvolvimento](./DEVELOPMENT_CYCLE.md)
+For more informations check the [Development Cycle](./DEVELOPMENT_CYCLE.md)
 
-## Supervisão
+## Supervision
 
-Para mais informações confira o [Ciclo de Desenvolvimento](./DEVELOPMENT_CYCLE.md)
+For more informations check the [Development Cycle](./DEVELOPMENT_CYCLE.md)
 
 ---
 
 [Home](../README.md)
 
-[architecture]: ./images/architecture.png 'Arquitetura'
+[architecture]: ./images/architecture.png 'Architecture'
 [app]: ./images/app.png 'App'
-[core-and-modules]: ./images/core-and-modules.png 'Core and Modules'
+[clean-architecture]: ./images/clean-architecture.jpg 'Clean Architecture'
+[common-and-modules]: ./images/common-and-modules.png 'Common and Modules'
 [data-flow]: ./images/data-flow.png 'Data Flow'
 
 [^1]: https://www.oreilly.com/library/view/frontend-architecture-for/9781491926772/ch01.html
 [^2]: https://www.amazon.com.br/Frontend-Architecture-Design-Systems-Sustainable-ebook/dp/B01B6WS868/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=
+[^3]: https://www.amazon.com.br/Domain-Driven-Design-Eric-Evans/dp/8550800651
+[^4]: https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164

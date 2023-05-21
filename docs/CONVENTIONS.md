@@ -1,17 +1,21 @@
-# Conveções do Projeto
+# Project Conventions
 
-- Excetuando-se os comentários, a língua utilizada no projeto é o inglês. Portanto as variáveis, classes, funções, nome de arquivos, nome de pastas e qualquer outra coisa deve estar em inglês
+- The language used in the project is English. So variables, classes, functions, file names, folder names and anything else must be in English
 
-- Utilizamos os guias de estilo do [Typescript](https://google.github.io/styleguide/tsguide.html), do [Sass](https://sass-lang.com/styleguide/typography) e do [CSS](https://google.github.io/styleguide/htmlcssguide.html) para escrever o código. Além de usar a convenção de nomes [BEM](https://getbem.com/naming/) para estilos.
+- The following style guides where follwed:
+  - [Typescript](https://google.github.io/styleguide/tsguide.html)
+  - [Sass](https://sass-lang.com/styleguide/typography)
+  - [CSS](https://google.github.io/styleguide/htmlcssguide.html) to write code
+  - [BEM](https://getbem.com/naming/) to choose names for styles.
 
-- Todo componente deve estar dentro de uma pasta. Esse componente deve conter pelo menos três arquivos: o de renderização do próprio componente, o arquivo de tradução e o arquivo de estilos O nome da pasta deve estar em Kebab Case enquanto o nome do componente deve estar em Pascal Case. Exemplo: componente UserWindow
+- Every component must be inside a folder. This component must contain at least three files (in most cases): the component rendering file, the translation file and the styles file. The folder name must be in Kebab Case while the component name must be in Pascal Case. Example: UserWindow component
 
   - /user-window
     - UserWindow.tsx
     - UserWindow.translations.tsx
-    - UserWindow.module.scss
+    - UserWindow.module.css
 
-- Seguimos as [Boas Práticas](BEST_PRACTICES.md)
+- Follow the [Best Practices](BEST_PRACTICES.md)
 
 ---
 

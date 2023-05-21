@@ -1,8 +1,14 @@
 # General Client Next
 
+![alt text][main-technologies]
+
 ## Description
 
-> This project
+> This a general architecture for enterprise projects using Next.js on the client side. This project follows DDD principles and adopts the Clean Architecture
+
+> Although it uses Next.js, most of the code can be extracted in a way that it can work with other libraries and frameworks with minor modifications. This can be done because the business rules is decoupled from the user interface layer (Next.js).
+
+![alt text][clean-architecture]
 
 ## Sumary
 
@@ -19,10 +25,10 @@
 
 ## Main Technologies
 
-NodeJS (18.9.0)
-npm (8.19.1)
-React (18.1.0)
-React Native (0.70.1)
+- Typescript
+- Node.js
+- Next.js
+- TailwindCSS
 
 ## Install
 
@@ -73,3 +79,6 @@ npm outdated # Check outdated packages
 npm run snyk:test # Detect vulnarabilities on packages
 npm run snyk:fix # Fix vulnarabilities on packages [IN PROGRESS]
 ```
+
+[clean-architecture]: ./docs/images/clean-architecture.jpg
+[main-technologies]: ./docs/images/main-technologies.png 

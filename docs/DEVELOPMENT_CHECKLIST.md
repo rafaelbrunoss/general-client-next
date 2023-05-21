@@ -1,48 +1,51 @@
-# Checklist de Desenvolvimento
+# Development Checklist
 
-### Planejamento da Tarefa
+### Task Planning
 
-- O planejamento da sprint foi feito?
-- Você conseguiu identificar o valor a ser entregue no final da sprint?
-- Você compreendeu sua tarefa?
-- Você compreendeu o valor da sua tarefa?
-- Sua tarefa foi bem divida? (consegue executá-la em menos de 2 dias de trabalho; é claro o que precisa ser feito; etc)
-- O design das telas da sua tarefa está pronto?
-- É necessário checar alguma questão de UX ou UI?
-- Algum requisito funcional precisa ser considerado? (O que o produto deve fazer)
+- Has sprint planning been done?
+- Were you able to identify the value to be delivered at the end of the sprint?
+- Did you understand your task?
+- Did you understand the value of your task to the project?
+- Was your task well divided? (you can do it in less than 2 days of work; it's clear what needs to be done; etc)
+- Is the design of your task screens ready? (when it's applicable)
+- Is the data model design ready? (when it's applicable)
+- Is the api contact ready? (when it's applicable)
+- Do you need to check any UX or UI issues?
+- Do any functional requirements need to be considered? (What the product should do)
 
-### 1º Check Arquitetural
+### 1st Architectural Check
 
-- Caso a tarefa envolva comunicação com o backend, os contratos de comunicação foram bem definidos?
-- As entidades relacionadas à aplicação foram bem mapeadas? (Cuidado com over engineering e com o nível excessivo de detalhamento em algo que não está tão claro)
-- Você compreende o paso a passo técnico de como fazer sua tarefa?
-- O seu passo a passo se encaixa na arquitetura proposta? Conferir a [Arquitetura](ARCHITECTURE.md).
-- Algum requisito não funcional precisa ser considerado? (Como o produto deve se comportar) [Checklist dos Requisitos Não Funcionais](NONFUNCTIONAL_REQUIREMENTS_CHECKLIST.md)
-- O design dos testes foi feito? Conferir [Testes](TESTS.md)
+- If the task involves communication with the backend, were the communication contracts well defined?
+- If the task involves communication with the frontend, were the communication contracts well defined?
+- Were the entities related to the application well mapped? (Beware of over engineering and excessive detail on something that is not so clear)
+- Do you understand the technical step by step of how to do your task?
+- Does your development idea fit the proposed architecture? Check the [Architecture](ARCHITECTURE.md).
+- Any non-functional requirements need to be considered? (How the prodcut shoudl behave) [Non-functional Requirements Checklist](NONFUNCTIONAL_REQUIREMENTS_CHECKLIST.md)
+- Has the test design been done? Check [Tests](TESTS.md)
 
-### 1ª Execução da Tarefa
+### 1st Task Execuction
 
-- Criar uma branch nova baseada na branch de developent.
-- Executar o ciclo do TDD
+- Create a new branch based on the branch of developent.
+- Run the TDD cycle
 
-### 2º Check Arquitetural
+### 2nd Architectural Check
 
-- Os requisitos arquiteturais definidos foram seguidos?
-- Algum requisito funcional precisa ser considerado?
-- Algum requisito não funcional precisa ser considerado? [Checklist dos Requisitos Não Funcionais](NONFUNCTIONAL_REQUIREMENTS_CHECKLIST.md)
-- As [Boas Práticas](BEST_PRACTICES.md) foram seguidas?
+- Were the defined architectural requirements followed?
+- Do any functional requirements need to be considered?
+- Any non-functional requirements need to be considered? [Non-functional Requirements Checklist](NONFUNCTIONAL_REQUIREMENTS_CHECKLIST.md)
+- Were the [Best Practices](BEST_PRACTICES.md) followed?
 
-### 2ª Execução da Tarefa
+### 2nd Task Execuction
 
-- Refatorar o código
-- Rodar o script de formatação e de lint
-- Rodar o script do inspetor de código e resolver os problemas apontados
-- Rodar o script de formatação e de lint
-- Rodar os testes unitários, de integração e e2e para garantir que nenhuma funcionalidade foi danificada.
-- Documentar o que foi feito (CHANGELOG, storybook, etc)
-- Fazer um pull de development e fazer o push da branch de trabalho. Lembre-se de seguir as boas práticas ao usar o [GIT](GIT.md)
-- Submeter o pull request para development
-- Após o merge na branch development, apagar a branch de trabalho
+- Refactor the code
+- Run formatting and lint script
+- Run the code inspector script and resolve the identified issues
+- Run formatting and lint script again
+- Run unit, integration and e2e tests (when it's applicable) to ensure no functionality was broken.
+- Document what was done (CHANGELOG, storybook, swagger, etc)
+- Make a development pull and push the working branch. Remember to follow best practices when using [GIT](GIT.md)
+- Submit the pull request to the development branch
+- After o merging on the development branch, delete your woking branch
 
 ---
 

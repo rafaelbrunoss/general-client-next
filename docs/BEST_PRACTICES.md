@@ -1,162 +1,170 @@
-# Boas Práticas
+# Best Practices
 
-O conteúdo dos livros abaixo são assimilados de uma forma melhor ao longo dos anos e com a prática. Ler todos os livros sem uma boa experiência de projetos pode não surtir o efeito de aprendizado desejado. Entenda que a área de software se desenvolve muito rápida e algum conteúdo das referências pode estar desatualizado.
+The contents of the books below are better assimilated over the years and with practice. Reading all the books without good project experience may not have the desired learning effect. Understand that the software field develops very quickly and some content in the references may be out of date.
 
-## Possua uma base sólida
+## Have a solid base
 
-Saber os fundamentos básicos de algoritmos é fundamental para que o desenvolvedor saiba pensar na melhor solução e consiga escrever um bom código. Os fundamentos vão te ajudar a entender melhor como diversas ferramentas funcionam e se elas podem ou não ser utéis para uma determinada aplicação. Esse conhecimento se torna imprescindível se o que for desenvolvido necessita de uma boa performance.
+Knowing the basic fundamentals of algorithms is essential for the engineer to know how to think about the best solution and be able to write good code. The fundamentals will help you better understand how different tools work and whether or not they can be useful for a given application. This knowledge becomes essential if what is developed needs a good performance.
 
-Recomendação de leitura:
+Reading recommendation:
 
 - [Introduction to Algorithms [Cormen & Rivest & Leiserson & Stein]](https://www.amazon.com.br/Algoritmos-Teoria-Pr%C3%A1tica-Thomas-Cormen/dp/8535236996)
 
-## Cuide do código
+## Take care of the code
 
-O desenvolvimento de um software não termina quando este resolve um determinado problema. Manter o código organizado também faz parte do trabalho. Hoje em dia, dificilmente alguém vai produzir algo sozinho, portanto mantenha o código limpo para aumentar a produtividade do trabalho. A falta de organização do código pode atrapalhar o seu entendimento pelas outras pessoas do time, como também dificultar a manutenção deste no futuro
+Software development does not end when it solves a certain problem. Keeping the code organized is also part of the job. Nowadays, hardly anyone is going to produce something alone, so keep the code clean to increase work productivity. The lack of organization of the code can hinder its understanding by other people on the team, as well as make it difficult to maintain it in the future.
 
-Recomendação de leitura:
+Reading recommendation:
 
 - [Clean Code [Robert C. Martin]](https://www.amazon.com.br/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 - [Refactoring [Martin Fowler]](https://www.amazon.com.br/Refatora%C3%A7%C3%A3o-Aperfei%C3%A7oando-Design-C%C3%B3digos-Existentes/dp/8575227246)
 
-## Trabalhando em equipe
+## Working in a team
 
-Desenvolvedores possuem uma responsabilidade não apenas com o código, mas com a equipe e com o projeto. Aprender a estimar atividades e priorizar tarefas é algo muito importante.
+Developers have a responsibility not just to the code, but to the team and the project. Learning to estimate activities and prioritize tasks is very important.
 
-Recomendação de leitura:
+Reading recommendation:
 
 - [The Clean Coder [Robert C. Martin]](https://www.amazon.com.br/codificador-limpo-conduta-programadores-profissionais/dp/8576086476)
 - [The Mythical Man-Month [Frederick Brooks]](https://www.amazon.com.br/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959)
 - [The Pragmatic Programmer [Thomas & Hunt]](https://www.amazon.com.br/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052)
 
-## Desenvolva um pensamento sistêmico
+## Develop systemic thinking
 
-Entenda sobre o domínio da aplicação. Saiba os processos e regras desse domínio para que você consiga pensar no sistema como um todo e criar soluções mais robustas.
+Understand about the application domain. Know the processes and rules of this domain so that you can think of the system as a whole and create more robust solutions.
 
-Recomendação de leitura:
+Reading recommendation:
 
 - [Domain Driven Design [Eric Evans]](https://www.amazon.com.br/Domain-Driven-Design-Eric-Evans/dp/8550800651)
 
-## Entenda sobre o negócio
+## Understand the architecture
 
-Para que um software possa gerar dinheiro para uma empresa, este deve resolver problemas reais e não teóricos. Muitos desenvolvedores caem na armadilha de fazer um design complexo logo de início ou então criar diversas funcionalidades que podem até ser boas, mas não resolvem o problema do cliente. Entenda primeiro sobre o negócio antes de gastar recursos para produzir algo. Teste as coisas com o cliente final antes de dar prosseguimento em trabalhos mais complicados.
+In order to grow, a good system needs a good architecture. It's not about the folders that should be created but how each layer of the application interacts with the others in a sustainable way.
 
-Recomendação de leitura:
+Reading recommendation:
+
+- [Clean Architecture: A Craftsman's Guide to Software Structure and Design [Robert C. Martin]](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164)
+
+## Understand the business
+
+For a software to generate money for a company, it must solve real problems and not theoretical ones. Many developers fall into the trap of making a complex design right from the start or creating several features that may be good, but do not solve the customer's problem. Understand the business first before spending resources to produce something. Test things out with the end customer before moving on to more complicated jobs.
+
+Reading recommendation:
 
 - [The Lean Startup [Eric Ries]](https://www.amazon.com.br/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898)
 
-## Princípios gerais
+## General principles
 
-Esses princípios estabelecem práticas que levam ao desenvolvimento de software consideranto aspectos como a manutenção e extensão à medida que o projeto cresce. Adotar essas práticas também pode contribuir para evitar código sujo e ajudar o refatorando do código.
+These principles establish practices that lead to software development considering aspects such as maintenance and extension as the project grows. Adopting these practices can also help prevent dirty code and help with code refactoring.
 
 ### SOLID
 
-Os princípios SOLID foram introduzidos por Robert C. Martin em seu artigo de 2000 “Design Principles and Design Patterns”. Esses conceitos foram posteriormente melhorados por Michael Feathers, que nos apresentou a sigla SOLID.
+The SOLID principles were introduced by Robert C. Martin in his 2000 article “Design Principles and Design Patterns”. These concepts were later improved upon by Michael Feathers, who introduced us to the acronym SOLID.
 
 #### Single Responsiblity Principle
 
-Uma classe deve ter um e apenas um motivo para mudar, o que significa que uma classe deve ter apenas um trabalho.
+A class should have one and only one reason to change, which means a class should have only one job.
 
 #### Open-Closed Principle
 
-Uma classe deve estar aberta para ser extendida e fechada para ser modificada
+A class must be open to be extended and closed to be modified.
 
 #### Liskov Substitution Principle
 
-Uma classe deveria ser substitutível por sua subclasse. Isso significa que, dado que a classe B é uma subclasse da classe A, devemos ser capazes de passar um objeto da classe B para qualquer método que espere um objeto da classe A e o método não deve fornecer nenhuma saída estranha nesse caso.
+A class should be replaceable by its subclass. This means that, given that class B is a subclass of class A, we should be able to pass an object of class B to any method that expects an object of class A, and the method shouldn't give any weird output in that case.
 
 #### Interface Segregation Principle
 
-Muitas interfaces específicas de clientes são melhores do que uma interface de propósito geral. Os clientes não devem ser forçados a implementar uma função de que não precisam.
+Many client specific interfaces are better than a general-purpose interface. Clients should not be forced to implement a function they don't need.
 
 #### Dependency Inversion Principle
 
-Uma classe deve depender de interfaces ou classes abstratas em vez de classes e funções concretas. Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender da abstração. As abstrações não devem depender de detalhes. Os detalhes devem depender de abstrações.
+A class should depend on interfaces or abstract classes rather than concrete classes and functions. High-level modules must not depend on low-level modules. Both must rely on abstraction. Abstractions should not depend on details. Details must depend on abstractions.
 
 ### GRASP (General Responsibility Assignment Software Principles)
 
-GRASP é um conjunto de 9 Princípios Gerais de Software sobre Atribuição de Responsabilidades.
+GRASP is a set of 9 General Responsibility Assignment Software Principles
 
 #### 1. Information Expert
 
-**Problema:** Onde devo adicionar uma nova funcionalidade?
-**Solução:** Atribua a responsabilidade para a classe que possui o maior conhecimento sobre a nova funcionalidade.
+**Problem:** Where should I add new functionality?
+**Solution:** Assign the responsibility to the class that has the most knowledge about the new feature.
 
 #### 2. Creator
 
-**Problema:** Quem deve criar um objeto A?
-**Solução:** Atribua a classe B a responsabilidade de criar o objeto A se um desses itens for verdadeiro (quanto mais itens melhor):
+**Problem:** Who should create an A object?
+**Solution:** Assign class B the responsibility of creating object A if one of these is true (the more items the better):
 
-- B contém A ou agrega objetos do tipo A
-- B salva instâncias de A
-- B usa de perto instâncias de A
-- B possui os dados de inicialização de A
+- B contains A or aggregates objects of type A
+- B saves instances of A
+- B closely uses instances of A
+- B has the initialization data of A
 
 #### 3. Controller
 
-**Problema:** Qual é o primeiro objeto, depois da camada de UI, que recebe e controla as operações do sistema
-**Solução:** Atribua a responsabilidade a um objeto que representa um dos seguintes itens:
+**Problem:** What is the first object, after the UI layer, that receives and controls system operations
+**Solution:** Assign the responsibility to an object that represents one of the following:
 
-- Representa o sistema como um todo (Facade Controller)
-- Representa um caso de uso, lidando com uma sequência de operações (Session Controller)
+- Represents the system as a whole (Facade Controller)
+- Represents a use case, dealing with a sequence of operations (Session Controller)
 
 #### 4. Low Coupling
 
-**Problema:** Como reduizr o impacto de uma mudança? Como suportar baixa dependência e aumentar o reuso?
-**Solução:** O acoplamento mede como um elemento está relacionado com outro. Quanto maior o acomplamento, maior é a dependência de um elemento ao outro. Uma solução é utilizar os princípios SOLID.
+**Problem:** How to reduce the impact of a change? How to support low dependency and increase reuse?
+**Solution:** Coupling measures how one element is related to another. The greater the coupling, the greater the dependence of one element on another. One solution is to use SOLID principles.
 
 #### 5. High Cohesion
 
-**Problema:** Como manter objetos focados numa tarefa, fáceis de entender, fáceis de gerenciar e, como efeito colateral, suportar Low Coupling?
-**Solução:** A coesão mede o quão forte todas as responsabilidades de um elemento estão relacionadas. Separe elementos que não possuem relações diretas entre si em outras classes.
+**Problem:** How to keep objects focused on a task, easy to understand, easy to manage and, as a side effect, support Low Coupling?
+**Solution:** Cohesion measures how strongly all of an element's responsibilities are related. Separate elements that do not have direct relationships with each other in other classes.
 
 #### 6. Indirection
 
-**Problema:** Onde atribuir responsabilidades para evitar acoplamento entre duas ou mais coisas?
-**Solução:** Atribua a responsabilidade para um objeto intermediário que fará o papel de mediador entre essas coisas.
+**Problem:** Where to assign responsibilities to avoid coupling between two or more things?
+**Solution:** Assign the responsibility to an intermediary object that will play the role of mediator between these things.
 
 #### 7. Polymorphism
 
-**Problema:** Como lidar com elementos que estão relacionados, mas possuem variações no tipo do elemento?
-**Solução:** Quando alternativas ou comportamentos relacionados variam por tipo, atribua a responsabilidade pelo comportamento (usando polimorfismo) aos tipos para os quais o comportamento varia.
+**Problem:** How to handle elements that are related but have variations in element type?
+**Solution:** When alternative or related behaviors vary by type, assign responsibility for the behavior (using polymorphism) to the types for which the behavior varies.
 
 #### 8. Pure Fabrication
 
-**Problema:** Qual objeto deve ter a responsabilidade, quando você não quer violar Alta Coesão e Baixo Acoplamento mas soluções oferecidas por outros princípios não são apropriadas?
-**Solução:** Atribua um conjunto de responsabilidades com alta coesão para uma classe artificial que não representa um conceito de domínio do problema.
+**Problem:** Which object should have the responsibility, when you don't want to violate High Cohesion and Low Coupling but solutions offered by other principles are not appropriate?
+**Solution:** Assign a highly cohesive set of responsibilities to an artificial class that does not represent a problem domain concept.
 
 #### 9. Protected Variations
 
-**Problema:** Como projetar objetos, subsistemas e sistemas para que as variações ou instabilidades nesses elementos não tenham um impacto indesejável em outros elementos?
-**Solução:** Identifique pontos de variação ou instabilidade prevista, atribua responsabilidades para criar uma interface estável em torno deles.
+**Problem:** How to design objects, subsystems and systems so that variations or instabilities in these elements do not have an undesirable impact on other elements?
+**Solution:** Identify points of variation or anticipated instability, assign responsibilities to create a stable interface around them.
 
 ### DRY (Don't Repeat Yourself)
 
-O foco do DRY é evitar a repetição de informações. Quando você escreve um código que executa as mesmas tarefas repetidamente, qualquer modificação de uma tarefa requer que a mesma alteração seja feita em cada instância dessa tarefa. Editar cada instância de uma tarefa é muito trabalhoso.
+The focus of DRY is to avoid the repetition of information. When you write code that runs the same tasks over and over again, any modification to a task requires the same change to be made to each instance of that task. Editing each instance of a task is a lot of work.
 
 ### KISS (Keep it simple, stupid)
 
-O KISS é um princípio de design que afirma que projetos e/ou sistemas devem ser tão simples quanto possível. Sempre que possível, a complexidade deve ser evitada, pois a simplicidade garante maiores níveis de aceitação e interação do usuário.
+KISS is a design principle that states that designs and/or systems should be as simple as possible. Whenever possible, complexity should be avoided, as simplicity ensures greater levels of user acceptance and interaction.
 
 ### TDA (Tell, Don't Ask)
 
-O TDA é um princípio que ajuda as pessoas a se lembrarem de que a orientação a objetos consiste em agrupar dados com as funções que operam nesses dados. Em vez de pedir dados a um objeto e agir com base nesses dados, devemos dizer a um objeto o que fazer. Isso incentiva a mover o comportamento para dentro do objeto para acompanhar os dados.
+TDA is a principle that helps people remember that object orientation is about grouping data with the functions that operate on that data. Rather than asking an object for data and acting on that data, we should tell an object what to do. This encourages moving the behavior into the object to keep up with the data.
 
 ### LoD (Law of Demeter)
 
-A LoD ou princípio do mínimo conhecimento é um princípio de design para o desenvolvimento de software, particularmente programas orientados a objetos. E é um princípio muito simples de aprender e aplicar, baseado em três regras básicas:
+The LoD or principle of least knowledge is a design principle for software development, particularly object-oriented programs. And it's a very simple principle to learn and apply, based on three basic rules:
 
-- Uma unidade deve ter apenas conhecimento limitado sobre outras unidades
-- Uma unidade só deve falar com seus amigos imediatos
-- Uma unidade não deve falar com estranhos
+- A unit should have only limited knowledge about other units
+- A unit should only talk to its immediate friends
+- A unit must not talk to strangers
 
-Uma unidade, neste contexto, é uma abstração codificada específica. Pode ser uma função, um módulo ou uma classe. E falar aqui significa fazer interface com essa abstração.
+A unit, in this context, is a specific coded abstraction. It can be a function, a module or a class. And to speak here means to interface with this abstraction.
 
 ### YAGNI (You ain’t gonna need it)
 
-O YAGNI é um princípio que diz que funcionalidades só devem ser adicionadas quando requisitadas. Esse princípio elimina o excesso e a ineficiência no desenvolvimento, ajudando os desenvolvedores a evitar esforço desnecessário em tarefas que assume-se que serão necessárias no futuro. Um exemplo disso são otimizações prematuras.
+YAGNI is a principle that functionality should only be added when requested. This principle eliminates excess and inefficiency in development, helping developers to avoid unnecessary effort on tasks that are assumed to be needed in the future. An example of this is premature optimizations.
 
-## Referências
+## References
 
 [Clean Code [Robert C. Martin]](https://www.amazon.com.br/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 [Domain Driven Design [Eric Evans]](https://www.amazon.com.br/Domain-Driven-Design-Eric-Evans/dp/8550800651)

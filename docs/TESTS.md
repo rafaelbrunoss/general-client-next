@@ -1,46 +1,46 @@
-# Testes
+# Tests
 
-Testar é uma parte essencial do desenvolvimento de um produto, especialmente para garantir a qualidade deste. Testes automáticos são importantes porque são mais rápidos de serem escritos e executados (no longo prazo) do que testes manuais. Além disso, as pessoas fazendo testes manuais podem esquecer alguma etapa, quanto os testes automatizados possuem mapeados todos os caminhos de teste que devem seguir. No longo prazo, testes automatizados salvam um bom tempo do time, como também diminuem o aparecimento de bugs.
+Testing is an essential part of product development, especially to ensure product quality. Automated tests are important because they are faster to write and run (in the long run) than manual tests. In addition, people doing manual tests may forget a step, when automated tests have all the test paths they must follow mapped out. In the long run, automated testing saves the team a lot of time, as well as reducing the appearance of bugs.
 
-## Tipos de Teste
+## Types of Test
 
-### Teste Unitário
+### Unit Test
 
-Um teste de unitário é uma maneira de testar uma unidade, o menor pedaço de código que pode ser logicamente isolado em um sistema. Na maioria das linguagens de programação, isso é uma função, uma sub-rotina, um método ou propriedade.
+A unit test is a way of testing a unit, the smallest piece of code that can be logically isolated in a system. In most programming languages, this is a function, subroutine, method, or property.
 
-### Teste de Integração
+### Integration Test
 
-Um teste de integração é um tipo de teste em que os módulos de software são integrados logicamente e testados como um grupo. O objetivo deste nível de teste é expor defeitos na interação entre esses módulos de software quando integrados
+An integration test is a type of test where software modules are logically integrated and tested as a group. The purpose of this level of testing is to expose defects in the interaction between these software modules when integrated
 
-### Teste End-to-End (e2e)
+### End-to-End Test (e2e)
 
-O teste de ponta a ponta (e2e) é uma técnica que testa todo o produto do início ao fim para garantir que o fluxo da aplicação se comporta conforme o esperado. Ele define as dependências do sistema do produto e garante que todas as peças integradas funcionem juntas conforme o esperado. O principal objetivo do teste de ponta a ponta (E2E) é testar a partir da experiência do usuário final, simulando o cenário real do usuário e validando o sistema em teste e seus componentes para integração e integridade de dados.
+End-to-End Testing (e2e) is a technique that tests the entire product from start to finish to ensure that the application flow behaves as expected. It defines the product's system dependencies and ensures that all integrated parts work together as expected. The main objective of end-to-end testing (E2E) is to test from the end-user experience, simulating the real user scenario and validating the system under test and its components for integration and data integrity.
 
-## Design de testes
+## Test Design
 
-Os códigos de teste devem ser simples e de fácil entendimento. Uma das convenções adotadas para atingir isso é chamada de AAA (Arrange, Act, Assert)
+Test codes should be simple and easy to understand. One of the conventions adopted to achieve this is called AAA (Arrange, Act, Assert)
 
-- **Arrange:** todo o código de configuração para trazer o sistema para o cenário que o teste pretende simular. Isso pode incluir instanciar o construtor da unidade sendo teste, adicionar registros de banco de dados, simular objetos e qualquer outro código de preparação.
-- **Act:** execute a unidade sendo testada. Geralmente, uma linha de código.
-- **Assert:** Garanta que o valor recebido satisfaz a expectativa. Geralmente, uma linha de código
+- **Arrange:** all the configuration code to bring the system to the scenario that the test intends to simulate. This can include instantiating the constructor of the unit being tested, adding database records, mock objects, and any other preparation code.
+- **Act:** run the unit being tested. Usually one line of code.
+- **Assert:** Ensure that the received value meets the expectation. Usually one line of code
 
-Ao construir o relatório de testes, inclua 3 partes em cada nome de teste:
+When building the test report, include 3 parts in each test name:
 
-1. O que está sendo testado
-2. Qual é a circunstância e o cenário de teste
-3. Qual é o resultado esperado
+1. What is being tested
+2. What is the test circumstance and scenario
+3. What is the expected result
 
-Os dois últimos passos ficam mais claros de serem identificados utilizando a seguinte estrutura: "**Dado** um determinado contexto, **quando** ocorrer algo, **então** espera-se algo"
+The last two steps are easier to identify using the following structure: "**Given** a certain context, **when** something happens, **then** something is expected"
 
-Exemplo:
+Example:
 
 ```node
-//1. Unidade sendo testada
+//1. Unit under test
 describe('Product Service', () => {
-  // 2. Cenário
-  describe('Adicionar novo produto', () => {
-    //2. Expectativa
-    it('Quando o preço não for especificado, então o status do produto é PENDING_APPROVAL', () => {
+  // 2. Scenario
+  describe('Add new product', () => {
+    //3. Expected result
+    it('When the price is not specified, then the product status is PENDING_APPROVAL', () => {
       // Arrange
       const productOptions = {};
 
@@ -54,7 +54,7 @@ describe('Product Service', () => {
 });
 ```
 
-Considere também a implementação de [Page Objects](https://martinfowler.com/bliki/PageObject.html) ao escrever os testes.
+When working on the frontend, you may also consider implementing [Page Objects](https://martinfowler.com/bliki/PageObject.html) while writing tests.
 
 ---
 

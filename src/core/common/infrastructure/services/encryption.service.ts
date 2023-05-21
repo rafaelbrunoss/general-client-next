@@ -59,13 +59,13 @@ export class EncryptionService {
         .toString('ascii')
         .replace(/\+/g, '~')
         .replace(/\//g, '_')
-        .replace(/[=]/g, '-');
+        .replace(/=/g, '-');
     } catch {
       return Buffer.from(text, 'base64')
         .toString('ascii')
         .replace(/\+/g, '~')
         .replace(/\//g, '_')
-        .replace(/[=]/g, '-');
+        .replace(/=/g, '-');
     }
   }
 

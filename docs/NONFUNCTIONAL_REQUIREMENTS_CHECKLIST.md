@@ -1,42 +1,42 @@
-# Checklist de Requisitos Não Funcionais
+# Non-function Requirements Checklist
 
-## Desempenho
-
-TO DO
-
-## Qualidade
+## Performance
 
 TO DO
 
-## Manutenibilidade
+## Quality
 
 TO DO
 
-## Adaptabilidade
+## Maintainability
 
 TO DO
 
-## Escalabilidade
+## Adaptability
 
 TO DO
 
-## Usabilidade
+## Scalability
 
 TO DO
 
-## Reusabilidade
+## Usability
 
 TO DO
 
-## Confiabilidade
+## Reusability
 
 TO DO
 
-## Portabilidade
+## Reliability
 
 TO DO
 
-## Segurança
+## Portability
+
+TO DO
+
+## Security
 
 TO DO
 
