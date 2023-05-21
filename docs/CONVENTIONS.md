@@ -3,6 +3,7 @@
 - The language used in the project is English. So variables, classes, functions, file names, folder names and anything else must be in English
 
 - The following style guides where follwed:
+
   - [Typescript](https://google.github.io/styleguide/tsguide.html)
   - [Sass](https://sass-lang.com/styleguide/typography)
   - [CSS](https://google.github.io/styleguide/htmlcssguide.html) to write code

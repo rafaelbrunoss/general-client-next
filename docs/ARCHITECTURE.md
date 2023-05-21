@@ -61,7 +61,7 @@ The application is the union of several modules with specific contexts. These mo
 
 #### App
 
-This is the only part specific to Next.js. Since version 13, the folder *app* contains all the pages. The idea is to separate the application in modules with a specific context and inside that modules, create pages that are made components. Each component must have it's render file and a translation file. Since this project uses TailwindCSS, there is no need for a style file in the majority of cases.
+This is the only part specific to Next.js. Since version 13, the folder _app_ contains all the pages. The idea is to separate the application in modules with a specific context and inside that modules, create pages that are made components. Each component must have it's render file and a translation file. Since this project uses TailwindCSS, there is no need for a style file in the majority of cases.
 
 All the business rules and infrastructure are maintained outside of this folder to promote decoupling.
 

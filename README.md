@@ -81,4 +81,4 @@ npm run snyk:fix # Fix vulnarabilities on packages [IN PROGRESS]
 ```
 
 [clean-architecture]: ./docs/images/clean-architecture.jpg
-[main-technologies]: ./docs/images/main-technologies.png 
+[main-technologies]: ./docs/images/main-technologies.png

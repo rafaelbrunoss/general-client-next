@@ -33,11 +33,11 @@ git commit -m "build(npm): update react from 18.1.0 to 18.2.0"
 
 - Commit small tasks. **Don't** do a `git add .` of multiple files.
 - Use semantic commits. Commits outside this rule will automatically fail.
-- Write specific and concise messages in commits. Always start with a verb in the infinitive. 
+- Write specific and concise messages in commits. Always start with a verb in the infinitive.
 - Use the [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html):
-   - When starting a new task, create a new branch based on the most current version of the development branch. When you finish the task, make a pull request from this new branch to the development one. When everything is done, delete your branch from the repository.
-   - When fixing a staging bug, a bugfix branch should be created based on the most current staging version branch. When you're done with the fix, make a pull request from that branch for staging and for development. When everything is done, delete your branch from the repository.
-   - When fixing a bug in production, a hotfix branch should be created based on the most current version of the production branch. When you're done fixing, make a pull request from that branch to production and staging. From staging make a new pull request to development. When everything is done, delete your branch from the repository.
+  - When starting a new task, create a new branch based on the most current version of the development branch. When you finish the task, make a pull request from this new branch to the development one. When everything is done, delete your branch from the repository.
+  - When fixing a staging bug, a bugfix branch should be created based on the most current staging version branch. When you're done with the fix, make a pull request from that branch for staging and for development. When everything is done, delete your branch from the repository.
+  - When fixing a bug in production, a hotfix branch should be created based on the most current version of the production branch. When you're done fixing, make a pull request from that branch to production and staging. From staging make a new pull request to development. When everything is done, delete your branch from the repository.
 
 ![alt text][gitlab-flow]
 
