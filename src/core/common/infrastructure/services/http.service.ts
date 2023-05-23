@@ -15,8 +15,6 @@ import { EnvironmentService } from '@common/infrastructure/services/environment.
 import { I18nService } from '@common/infrastructure/services/i18n.service';
 import { StorageService } from '@common/infrastructure/services/storage.service';
 
-import { AuthUser, SignInCredentials } from '@auth/domain/entities';
-
 @injectable()
 export class HttpService {
   private axiosInstance: any;
@@ -76,9 +74,7 @@ export class HttpService {
 
     config.headers['x-enviroment'] = APP_CONFIG.environment;
 
-    const currentUser = (await this.storageService.getItem<AuthUser>(
-      'authUser',
-    )) as AuthUser;
+    const currentUser = await this.storageService.getItem<any>('authUser');
     if (currentUser && currentUser.id) {
       config.headers['x-language'] = this.i18nService.userLanguage;
       config.headers.Authorization = `Bearer ${currentUser.token}`;
@@ -87,18 +83,11 @@ export class HttpService {
     return config;
   };
 
-  private async autoLogin(): Promise<void> {
-    const signInCredentials = (await this.storageService.getItem<SignInCredentials>(
-      'signInCredentials',
-    )) as SignInCredentials;
-    await this.post(`${this.baseURL}/auth/sign-in`, signInCredentials);
-  }
-
   private checkTokenExpiration = (apiResult: ApiResult): void => {
     // Notify the user about the remaining time of authentication
     if (apiResult && apiResult.tokenExpirationInMinutes) {
       if (apiResult.tokenExpirationInMinutes <= 0) {
-        this.autoLogin();
+        console.warn('autoLogin event');
       } else {
         console.warn('Remaining time: ', apiResult.tokenExpirationInMinutes);
       }

@@ -5,4 +5,5 @@ import { SignInCredentials, AuthUser, SignUpData } from '@auth/domain';
 export interface IAuthGateway {
   signIn: (signInCredentials: SignInCredentials) => Promise<ApiResult<AuthUser>>;
   signUp: (signUpData: SignUpData) => Promise<ApiResult<AuthUser>>;
+  autoSignIn: () => Promise<ApiResult<AuthUser>>;
 }

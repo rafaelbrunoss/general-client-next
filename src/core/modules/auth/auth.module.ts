@@ -23,6 +23,7 @@ export class AuthModule extends BaseModule {
     bind(INFRASTRUCTURE_AUTH_SYMBOLS.AuthHttpGateway).toDynamicValue((context) => {
       return new AuthHttpGateway(
         context.container.get(INFRASTRUCTURE_COMMON_SERVICES_SYMBOLS.HttpService),
+        context.container.get(INFRASTRUCTURE_COMMON_SERVICES_SYMBOLS.StorageService),
       );
     });
   }
