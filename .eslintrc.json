@@ -39,7 +39,7 @@
       },
       {
         "type": "auth-application",
-        "pattern": "src/core/modules/auth/ui/*"
+        "pattern": "src/core/modules/auth/application/*"
       },
       {
         "type": "auth-infrastructure",
@@ -51,7 +51,7 @@
       },
       {
         "type": "user-application",
-        "pattern": "src/core/modules/user/ui/*"
+        "pattern": "src/core/modules/user/application/*"
       },
       {
         "type": "user-infrastructure",
